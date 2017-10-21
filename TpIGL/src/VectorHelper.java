@@ -1,7 +1,19 @@
+/**
+ * Classe permettant de Trier un tableau,inverser un tableau,calculer le min et le max simultanement
+ * d'un tableau,calculer la somme de deux tableax,appliquer la formule(((X+9)*2)-1) a tout les elements
+ * d'un tableau tel que X represente l'element du tableau  sur lequel on va appliquer cette formule.
 
+ * @author Hamoud Radja et Abderrahman Massina.
+ * @version 3.0
+ */
 public class VectorHelper {
 
-   
+    /**
+     *cette methode fait le tri du tableau donné en entrée.
+     * @param  tab  est un tableau  à trier de type entier.
+     * @param  sens est un boolean qui indique le sens de tri croissant/décroissant.
+     * @return  cette methode retourne le tableau en entrée trié
+     */
 
     public static int[] trier(int [] tab , boolean sens){
         int i,p;
@@ -37,7 +49,11 @@ public class VectorHelper {
         return(tab);
     }
 
-  
+    /**
+     *cette methode fait le tri du tableau donné en entrée.
+     * @param  tab  est un tableau de type entier pour lequel on calcule le min et le max.
+     * @return  cette methode retourne le tableau res qui contient le min le max et leurs position.
+     */
     public static int[] min_max ( int [] tab ){
         int res[]= new int[4];
         int i;
@@ -66,7 +82,11 @@ public class VectorHelper {
         return (res);
     }
 
-  
+    /**
+     *cette methode inverse tableau donné en entrée.
+     * @param  tab  est un tableau de type entier que on va inverser.
+     * @return  cette methode retourne le tableau en entrée inversé.
+     */
     public static int[] inverser(int[] tab){
         int taille=tab.length;
         int[] res = new int[taille];
@@ -79,7 +99,11 @@ public class VectorHelper {
     }
 
 
-   
+    /**
+     *cette methode affiche le tableau donné en entrée.
+     * @param  tab  est un tableau que on va afficher ses éléments.
+
+     */
     public static void afficher_tab(int[]tab){
         int i;
         for(i=0;i<tab.length;i++){
@@ -88,7 +112,7 @@ public class VectorHelper {
         System.out.println();
     }
 
-
+    
 
 
 }
