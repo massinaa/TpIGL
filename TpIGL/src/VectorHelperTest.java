@@ -45,6 +45,33 @@ public class VectorHelperTest {
     }
 
 
- 
+    /**
+     * Test of SommeTableaux method, of class VectorHelper.
+     */
+    @Test
+    public void testSommeTableaux() throws Exception {
+        System.out.println("SommeTableaux");
+        int[] tab1 = {1,2,3,4};
+        int[] tab2 = {9,3,7,9};
+        int[] tab3={2,3};
+
+        int[] expResult = {10,5,10,13};
+        int[] result = VectorHelper.SommeTableaux(tab1,tab2);
+        assertArrayEquals(expResult, result);
+        assertArrayEquals(null,VectorHelper.SommeTableaux(tab2,tab3));
+
+    }
+    /**
+     * Test of AppliquerFormuleTableaux method, of class VectorHelper.
+     */
+    @Test
+    public void testAppliquerFormuleTableaux() {
+        System.out.println("AppliquerFormuleTableaux");
+        int[] tab = {1,2,3,4};;
+        int[] expResult = {19,21,23,25};
+        int[] result = VectorHelper.AppliquerFormuleTableaux(tab);
+        assertArrayEquals(expResult, result);
+
+    }
 
 }
