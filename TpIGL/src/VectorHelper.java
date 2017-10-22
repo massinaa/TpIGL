@@ -112,7 +112,61 @@ public class VectorHelper {
         System.out.println();
     }
 
-    
+    /**
+     *cette methode fait la somme  des deux  tableaux donnés en entrée.
+     * @param  tab1  est le premier tableau.
+     * @param  tab2  est le deusiéme tableau.
+     * @return  cette methode retourne un tableau qui contient la somme des tableaux donnés en entrée.
+     * @throws  NoEquelTableLengthException si les deux tableaux nont pas la meme taille.
+     */
+    public static int [] SommeTableaux (int [] tab1,int [] tab2)throws NoEquelTableLengthException
+    {
+        int taille1=tab1.length;
+        int taille2=tab2.length;
+        int[] res=null;
+        if(taille1!=taille2)
+        {
+            return res;
+            //throw new NoEquelTableLengthException();
+        }
+        if(taille1==taille2)
+        {
+            res= new int [taille1];
+            int i;
+            for(i=0;i<taille1;i++)
+            {
+                res[i]=tab1[i]+  tab2 [i];
+            }
+
+        }
+        return res;
+    }
+
+    /**
+     *cette methode applique une formule à l'élément donné en entrée.
+     * @param  n est un entier
+     * @return  cette methode retourne le resultat de l'application de la formule sur n.
+     */
+    public static int formule(int n)
+    {
+        return (((n+9)*2)-1);
+    }
+    /**
+     *cette methode applique une méthode à tout les éléments du tableau donné en entrée.
+     * @param  tab est un tableau d'entier.
+     * @return  cette methode retourne le tableau en entré aprés l'application de la méthode.
+     */
+    public static int [] AppliquerFormuleTableaux(int [] tab)
+    {
+        int taille=tab.length;
+        int []res=new int[taille];
+        int i;
+        for(i=0;i<taille;i++)
+        {
+            res[i]=formule(tab[i]);
+        }
+        return res;
+    }
 
 
 }
